@@ -947,8 +947,9 @@ outline: none;
 border: 1px solid #2196F3;
 }
 
-.contact-form-input:hover + .contact-form-icon,
+
 .contact-form-input:focus + .contact-form-icon {
+  
   fill: var(--accent-color);
 }
 
