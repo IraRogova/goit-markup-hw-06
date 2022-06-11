@@ -441,12 +441,12 @@
         <div class="subscribe-container">
           <b class="subscribe-title">Подпишитесь на рассылку</b>
           <form name="subscribe-form" class="subscribe-form">
-            <label for="email" class="subscribe-lable">E-mail</label>
+            <label class="subscribe-lable" for="email">E-mail</label>
             <input
+              class="subscribe-email"
               type="email"
               name="email"
               placeholder="E-mail"
-              class="subscribe-email"
               id="email"
             />
             <button type="submit" class="subscribe-btn">
@@ -462,13 +462,67 @@
 
     <!-- </footer> -->
     <!--Modal window-->
-    <div class="backdrop is-hidden" data-modal>
+    <!--вернуть is-hidden в div-->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="button border-svg">
           <svg class="close-modal" data-modal-close width="17" height="17">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
         </button>
+
+        <form class="conatct-form">
+          <b class="contact-form-title">Оставьте свои данные, мы вам перезвоним</b>
+          <label class="conatct-form-field">
+            <span class="conatct-form-field-description">Имя</span>
+            <div class="contact-form-input-wrapper">
+              <input class="conatct-form-input" type="text" name="user_name" minlength="2" />
+              <svg class="conatct-form-icon" wght="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-person-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="conatct-form-field">
+            <span class="conatct-form-field-description">Телефон</span>
+            <div class="contact-form-input-wrapper">
+              <input
+                class="conatct-form-input"
+                type="tel"
+                name="user_phone_number"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              />
+              <svg class="conatct-form-icon" wght="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="conatct-form-field">
+            <span class="conatct-form-field-description">Почта</span>
+            <div class="contact-form-input-wrapper">
+              <input class="conatct-form-input" type="email" name="user_email" />
+              <svg class="conatct-form-icon" wght="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="conatct-form-field">
+            <span class="conatct-form-field-description">Комментарий</span>
+
+            <textarea
+              class="conatct-form-comment"
+              name="user_comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <input class="contact-form-checkbox" type="checkbox" name="user_policy" required />
+          <label class="contact-form-checkbox-lable" for=""
+            >Соглашаюсь с рассылкой и принимаю<a class="conatct-form-checkbox-link" href="#"
+              >Условия договора</a
+            >
+          </label>
+          <button class="contact-form-btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

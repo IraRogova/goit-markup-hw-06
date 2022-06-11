@@ -825,12 +825,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250m
   display: flex;
   justify-content: end;
   position: absolute;
+  padding: 40px;
   left: 50%;
   top: 50%;
-  
   width: 528px;
   height: 581px;
-  
  background: #FFFFFF;
  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
  border-radius: 4px;
@@ -839,17 +838,19 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250m
 }
 
 .border-svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items:center;
-  margin-right: 8px;
-  margin-top: 8px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   border : 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--main-white);
+  padding: 0;
 }
 
 /* .close-modal {
@@ -861,7 +862,88 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250m
  
 } */
 
-/* ======== Modal window ========*/
+/* ======== /Modal window ========*/
+
+
+
+
+/* ======== CONTACT FORM ========*/
+
+
+.conatct-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-title {
+  margin-bottom: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color:#212121;;
+}
+
+.conatct-form-field {
+  margin-bottom: 10px;
+}
+
+.contact-form-input-wrapper {
+  position: relative;
+  margin-top: 4px;
+}
+
+.conatct-form-icon{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+ 
+}
+
+.conatct-form-field-description {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.2;
+letter-spacing: 0.01em;
+
+color: var(--accent-black);
+}
+
+.conatct-form-input{
+  
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+
+}
+
+
+.conatct-form-input:focus {
+outline: none;
+border: 1px solid #2196F3;
+}
+
+.conatct-form-input:focus + .conatct-form-icon {
+  fill: var(--accent-color);
+}
+
+
+
+/* ======== /CONTACT FORM ========*/
 
 
 
@@ -998,15 +1080,10 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
 }
 
 
-
-
-
 .link-shadow:hover .img-hover::before{
   opacity: 1;
   transform: translateY(0);
 }
-
-
 
 .content-hover {
   position: absolute;
